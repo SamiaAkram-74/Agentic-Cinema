@@ -1,26 +1,43 @@
-# Agentic Cinema
+Steps to Run Agentic Cinema
 
-## Local setup
+Open the Project in VS Code
 
-```powershell
-pip install -r requirements.txt
-$env:AGENTIC_CINEMA_DEMO="1"
+Start the Backend
+
+ Open a VS Code terminal and run:
+
+ pip install -r requirements.txt
+
+ $env:AGENTIC_CINEMA_LIVE="0"
+
+ uvicorn app:app --reload --port 8000
+
+Keep this terminal running.
+
+The backend should be available at: http://127.0.0.1:8000
+
+Start the Frontend
+
+Open a second VS Code terminal and run:
+
+ npm install
+
+ npm.cmd run dev
+
+Keep this terminal running.
+
+Open the Application
+Open:
+
+http://127.0.0.1:5173
+
+The header should show that the backend is online.
+
+Enable Live Gemini and ClickHouse
+Local mode is recommended for demonstrations. To use real Gemini and ClickHouse:
+
+$env:AGENTIC_CINEMA_LIVE="1"
+
 uvicorn app:app --reload --port 8000
-```
 
-In another terminal:
-
-```powershell
-npm install
-npm run dev
-```
-
-Open `http://localhost:5173`. Local mode exercises the complete workflow and assistant without external service delays. For live Gemini and ClickHouse agents, explicitly set `AGENTIC_CINEMA_LIVE=1`, `GEMINI_API_KEY`, and the ClickHouse variables from `.env`.
-
-## Tests
-
-```powershell
-pytest -q
-```
-
-The ClickHouse table can be created and seeded with `sql/001_production_scenes.sql`.
+Your .env must contain valid Gemini and ClickHouse credentials.
