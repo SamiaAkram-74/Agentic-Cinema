@@ -1,4 +1,4 @@
-Steps to Run Agentic Cinema
+**Steps to Run Agentic Cinema**
 
 Open the Project in VS Code
 
