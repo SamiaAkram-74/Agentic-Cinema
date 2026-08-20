@@ -1,8 +1,10 @@
 **Steps to Run Agentic Cinema**
+-------------------------------
 
 Open the Project in VS Code
 
 Start the Backend
+-----------------
 
  Open a VS Code terminal and run:
 
@@ -17,6 +19,7 @@ Keep this terminal running.
 The backend should be available at: http://127.0.0.1:8000
 
 Start the Frontend
+------------------
 
 Open a second VS Code terminal and run:
 
